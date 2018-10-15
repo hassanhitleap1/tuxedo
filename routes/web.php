@@ -18,3 +18,11 @@
 $router->get('/','HomeController@index');
 
 $router->post('/normallogin','LoginController@normalLogin');
+
+$router->post('/facebooklogin','LoginController@facebookLogin');
+
+$router->post('/normalregister','LoginController@normalRegister');
+
+$router->post('/facebookregister','LoginController@facebookRegister');
+
+$router->get('/get-users','HomeController@getUsers');

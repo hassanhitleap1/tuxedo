@@ -18,7 +18,31 @@ class LoginController extends Controller
     }
 
     public function normalLogin(Request $request){
-        var_dump($request);
-        exit;
+        $email=$request->email;
+        $password=$request->password;
+       $user= User::create([
+            'name'=>$request->email,
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ]);
+
+        Auth::attempt($user);
+        return redirect('/');
     }
+
+
+    public function facebookLogin(Request $request){
+        $email=$request->email;
+        $password=$request->password;
+       $user= User::create([
+            'name'=>$request->email,
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ]);
+
+        Auth::attempt($user);
+        return redirect('/');
+    }
+
+
 }

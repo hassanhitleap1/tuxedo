@@ -4,15 +4,31 @@ namespace App\Http\Controllers;
 
 class RegistrationController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
+    public function normalRegister(Request $request){
+        $email=$request->email;
+        $password=$request->password;
+       $user= User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ]);
+
+        Auth::attempt($user);
+        return redirect('/');
     }
 
+
+    public function facebookRegister(Request $request){
+        $email=$request->email;
+        $password=$request->password;
+       $user= User::create([
+            'name'=>$request->email,
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ]);
+
+        Auth::attempt($user);
+        return redirect('/');
+    }
     
 }
