@@ -17,6 +17,8 @@
 
 $router->get('/','HomeController@index');
 
+$router->get('/facebook','LoginController@viewFacebook');
+
 $router->post('/normallogin','LoginController@normalLogin');
 
 $router->post('/facebooklogin','LoginController@facebookLogin');
