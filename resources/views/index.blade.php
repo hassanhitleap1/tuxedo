@@ -6,10 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Hyperspace by HTML5 UP</title>
+		<title>Tuxedo</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url('assets/css/main.css')}}" />
+        <link rel="stylesheet" href="{{ url('assets/css/main.css')}}" />
+        <link rel="stylesheet" href="{{ url('custm.css')}}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<noscript><link rel="stylesheet" href="{{url('assets/css/noscript.css')}}" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -24,6 +26,7 @@
 							<li><a href="#two">What we do</a></li>
                             <li><a href="#three">Get in touch</a></li>
                             <li><a href="#login">Login</a></li>
+                            <li><a href="#registration">Registration</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -189,15 +192,11 @@
                 <!-- Login -->
 					<section id="login" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>login</h2>
+							<h2>Login</h2>
 							<div class="split style1">
 								<section>
 									<form method="post" action="#">
 										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
 											<div class="field half">
 												<label for="email">Email</label>
 												<input type="text" name="email" id="email" />
@@ -207,18 +206,72 @@
 												<input type="password" name="password" id="password" />
                                             </div>
                                             <div class="field half">
-												<label for="c_password">Confirm Password</label>
-												<input type="password" name="c_password" id="c_password" />
-											</div>
+												<a href="" class="btn btn-facebook">
+                                                <i class="fab fa-facebook-f"></i>
+                                                    login with facebook
+                                                </a>
+                                            </div>
+                                            <div class="field half">
+                                                    <a href="" class="btn btn-twitter">
+                                                    <i class="fab fa-twitter"></i>
+                                                        login with twitter
+                                                    </a>
+                                            </div>
 										</div>
 										<ul class="actions">
-											<li><a href="{{url('/')}}" class="button submit">Send Message</a></li>
+											<li><a href="{{url('/')}}" class="button submit">Login</a></li>
 										</ul>
 									</form>
 								</section>
 							</div>
 						</div>
-					</section>
+                    </section>
+                    
+                <!-- registration -->
+					<section id="registration" class="wrapper style1 fade-up">
+                            <div class="inner">
+                                <h2>Registration</h2>
+                                <div class="split style1">
+                                    <section>
+                                        <form method="post" action="#">
+                                            <div class="fields">
+                                                <div class="field half">
+                                                    <label for="name">Name</label>
+                                                    <input type="text" name="name" id="name" />
+                                                </div>
+                                                <div class="field half">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" name="email" id="email" />
+                                                </div>
+                                                <div class="field half">
+                                                    <label for="password">Password</label>
+                                                    <input type="password" name="password" id="password" />
+                                                </div>
+                                                <div class="field half">
+                                                    <label for="c_password">Confirm Password</label>
+                                                    <input type="password" name="c_password" id="c_password" />
+                                                </div>
+                                                <div class="field half">
+                                                    <a href="" class="btn btn-facebook">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                            Registration with facebook
+                                                    </a>
+                                                </div>
+                                                <div class="field half">
+                                                        <a href="" class="btn btn-twitter">
+                                                        <i class="fab fa-twitter"></i>
+                                                            Registration with twitter
+                                                        </a>
+                                                </div>
+                                            </div>
+                                            <ul class="actions">
+                                                <li><a href="{{url('/')}}" class="button submit">Rgistration</a></li>
+                                            </ul>
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+                        </section>
 
 			</div>
 

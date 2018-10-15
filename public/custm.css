@@ -1,0 +1,18 @@
+.btn{
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-decoration: none;
+}
+
+.btn-facebook {
+    border: 1px solid #3B5998;
+    background-color: #3B5998;
+    color: white;
+  }
+  
+  .btn-twitter {
+    border: 1px solid #55ACEE;
+    background-color: #55ACEE;
+    color: white;
+  }
