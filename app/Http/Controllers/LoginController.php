@@ -30,8 +30,6 @@ class LoginController extends Controller
             echo $e->getMessage();   // insert query
          }
          $credentials = $request->only('email', 'password');
-         var_dump($credentials);
-         exit;
 
          if (Auth::attempt($credentials, $request->has('remember'))) {
              return ['result' => 'ok'];

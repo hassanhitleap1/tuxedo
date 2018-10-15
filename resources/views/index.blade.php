@@ -26,7 +26,7 @@
 							<li><a href="#two">What we do</a></li>
 							<li><a href="#three">Get in touch</a></li>
 							{{-- @if (auth()->guest())  @endif  	@guest @else @endguest	--}}
-						
+							@if (auth()->guest())  @endif
 							<li><a href="#login">Login</a></li>
 							<li><a href="#registration">Registration</a></li>
 							
