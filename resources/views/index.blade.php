@@ -195,7 +195,7 @@
 							<h2>Login</h2>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="{{url('/normallogin')}}">
 										<div class="fields">
 											<div class="field half">
 												<label for="email">Email</label>

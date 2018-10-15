@@ -16,3 +16,5 @@
 // });
 
 $router->get('/','HomeController@index');
+
+$router->post('/normallogin','LoginController@normalLogin');
