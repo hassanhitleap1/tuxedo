@@ -29,6 +29,13 @@ class LoginController extends Controller
             // do task when error
             echo $e->getMessage();   // insert query
          }
+
+         var_dump($user);
+        //  $user = Auth::user();
+        //     var_dump($user);
+        //     exit;
+        //  $user = $request->user();
+         exit;
          $credentials = $request->only('email', 'password');
 
          if (Auth::attempt($credentials, $request->has('remember'))) {

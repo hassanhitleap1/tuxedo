@@ -25,17 +25,16 @@
 							<li><a href="#one">Who we are</a></li>
 							<li><a href="#two">What we do</a></li>
 							<li><a href="#three">Get in touch</a></li>
-							{{-- @if (auth()->guest())  @endif  	@guest @else @endguest	--}}
-							@if (auth()->guest())  @endif
-							<li><a href="#login">Login</a></li>
-							<li><a href="#registration">Registration</a></li>
-							
+							@if(Auth::user())
 							<li><a href="{{url('/logout')}}" onclick="event.preventDefault();
 								document.getElementById('logout-form').submit();">
-							<i class="material-icons">input</i>Sign Out</a></li>
-				   			<form id="logout-form" action="{{url('/logout')}}" method="POST" style="display: none;">
+								<i class="material-icons">input</i>Sign Out</a></li>
+				   				<form id="logout-form" action="{{url('/logout')}}" method="POST" style="display: none;">
 							   </form>
-							
+							@else
+							<li><a href="#login">Login</a></li>
+							<li><a href="#registration">Registration</a></li>
+							@endif
 						</ul>
 					</nav>
 				</div>
